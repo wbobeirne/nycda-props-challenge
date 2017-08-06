@@ -1,6 +1,6 @@
 import "./Profile.scss";
 import React from "react";
-import propTypes from "prop-types";
+import PropTypes from "prop-types";
 
 class Profile extends React.Component {
 	render() {
@@ -19,12 +19,12 @@ class Profile extends React.Component {
 }
 
 Profile.propTypes = {
-	user: propTypes.shape({
-		firstName: propTypes.string,
-		lastName: propTypes.string,
-		images: propTypes.arrayOf(propTypes.shape({
-			small: propTypes.string,
-			large: propTypes.string,
+	user: PropTypes.shape({
+		firstName: PropTypes.string,
+		lastName: PropTypes.string,
+		images: PropTypes.arrayOf(PropTypes.shape({
+			small: PropTypes.string,
+			large: PropTypes.string,
 		}))
 	}).isRequired,
 }
