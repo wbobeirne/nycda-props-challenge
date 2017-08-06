@@ -33,7 +33,7 @@ class Dropdown extends React.Component {
 }
 
 Dropdown.propTypes = {
-	onChange: PropTypes.arrayOf(PropTypes.string).isRequired,
+	onChange: PropTypes.function,
 	name: PropTypes.string,
 	label: PropTypes.string,
 	options: PropTypes.arrayOf(PropTypes.shape({

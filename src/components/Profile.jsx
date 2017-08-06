@@ -22,7 +22,10 @@ Profile.propTypes = {
 	user: PropTypes.shape({
 		firstName: PropTypes.string,
 		lastName: PropTypes.string,
-		images: PropTypes.string,
+		images: PropTypes.arrayOf(PropTypes.shape({
+			small:PropTypes.string,
+			large: PropTypes.string,
+		})),
 	}).isRequired,
 };
 

@@ -32,8 +32,8 @@ class AlertMessage extends React.Component {
 }
 
 AlertMessage.propTypes = {
-	type: PropTypes.string,
-	children:PropTypes.string,
+	type: PropTypes.oneOf(["info", "success", "error", "close"]),
+	children: PropTypes.node,
 };
 
 export default AlertMessage;
