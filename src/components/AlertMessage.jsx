@@ -1,6 +1,7 @@
 // See my CSS for what types are valid
 import "./AlertMessage.scss";
 import React from "react";
+import PropTypes from "prop-types";
 
 class AlertMessage extends React.Component {
 	constructor(props) {
@@ -28,6 +29,13 @@ class AlertMessage extends React.Component {
 			</div>
 		);
 	}
+}
+
+AlertMessage.propTypes = {
+	type: PropTypes.oneOf(["info","success","error"]),
+}
+AlertMessage.defaultProps = {
+	type: "info",
 }
 
 export default AlertMessage;
