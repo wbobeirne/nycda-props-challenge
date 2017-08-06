@@ -25,7 +25,7 @@ Profile.propTypes = {
 		images: PropTypes.arrayOf(PropTypes.shape({
 			small: PropTypes.string,
 			large: PropTypes.string,
-		}))
+		})).isRequired,
 	}).isRequired,
 }
 
