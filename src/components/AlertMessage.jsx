@@ -32,7 +32,10 @@ class AlertMessage extends React.Component {
 }
 
 AlertMessage.propTypes = {
-	type: propTypes.string.isRequired,
+	type: propTypes.arrayOf(["info","success","error"]),
+}
+AlertMessage.defaultProps = {
+	type: "info",
 }
 
 export default AlertMessage;
