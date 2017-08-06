@@ -33,17 +33,19 @@ class Dropdown extends React.Component {
 }
 
 Dropdown.propTypes = {
-	name: propTypes.string.isRequired,
+	name: propTypes.string,
 	label: propTypes.string,
-	options: propTypes.shape({
+	options: propTypes.arrayOf(propTypes.shape({
 		value: propTypes.string,
 		name: propTypes.string,
-	}).isRequired,
-	value: propTypes.string.isRequired,
+	})).isRequired,
+	value: propTypes.string,
 }
 
 Dropdown.defaulProps = {
+	name: "dropdown",
 	label: "Dropdown",
+	value: "dropdown",
 }
 
 
