@@ -36,8 +36,11 @@ Dropdown.propTypes = {
 	onChange: PropTypes.arrayOf(PropTypes.string).isRequired,
 	name: PropTypes.string,
 	label: PropTypes.string,
-	options: PropTypes.arrayOf(PropTypes.object).isRequired,
-	value: PropTypes.function,
+	options: PropTypes.arrayOf(PropTypes.shape({
+		value: PropTypes.string,
+		name: PropTypes.string,
+	})).isRequired,
+	value: PropTypes.string,
 };
 
 export default Dropdown;
