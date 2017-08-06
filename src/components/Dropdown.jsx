@@ -31,6 +31,7 @@ class Dropdown extends React.Component {
 	}
 }
 Dropdown.propTypes = {
+	onChange: PropTypes.func,
 	name: PropTypes.string,
 	label: PropTypes.string,
 	options: PropTypes.array,

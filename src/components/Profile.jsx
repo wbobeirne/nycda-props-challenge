@@ -19,9 +19,9 @@ class Profile extends React.Component {
 }
 Profile.propTypes = {
 	user: PropTypes.shape({
-		images: PropTypes.array.isRequired,
-		firstName: PropTypes.string.isRequired,
-		lastName: PropTypes.string.isRequired,
-	}),
+		images: PropTypes.array,
+		firstName: PropTypes.string,
+		lastName: PropTypes.string,
+	}).isRequired,
 };
 export default Profile;
