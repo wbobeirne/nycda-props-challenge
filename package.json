@@ -1,7 +1,7 @@
 {
   "name": "webpack-template",
   "version": "1.0.0",
-  "description": "",
+  "description": "The following set of components will challenge your knowledge of propTypes and defaultProps. Alter each component in `src/components/` to have the correct propTypes, and if there's a reasonable place to, add defaultProps. For objects, do not rely on just `PropTypes.object`, use `PropTypes.shape` to define all of the properties that you know of for the object. If having a property is required for it to function, or won't look right without it, use `.isRequired`",
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --progress --config=webpack.config.js",
@@ -37,5 +37,14 @@
     "style-loader": "^0.18.2",
     "webpack": "^3.4.1",
     "webpack-dev-server": "^2.6.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dtofuah/nycda-props-challenge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dtofuah/nycda-props-challenge/issues"
+  },
+  "homepage": "https://github.com/dtofuah/nycda-props-challenge#readme"
 }
