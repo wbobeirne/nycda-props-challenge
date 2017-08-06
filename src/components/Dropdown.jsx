@@ -1,6 +1,6 @@
 import "./Dropdown.scss";
 import React from "react";
-
+import PropTypes from "prop-types";
 class Dropdown extends React.Component {
 	_handleChange = (ev) => {
 		this.props.onChange(ev);
@@ -30,5 +30,11 @@ class Dropdown extends React.Component {
 		);
 	}
 }
+Dropdown.propTypes = {
+	name: PropTypes.string,
+	label: PropTypes.string,
+	options: PropTypes.array,
+	value: PropTypes.string,
+};
 
 export default Dropdown;
