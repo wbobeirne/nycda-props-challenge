@@ -48,11 +48,7 @@ class App extends React.Component {
 				/>
 
 				{/* Invalid components */}
-				<AlertMessage type="ohgodwhy">
-					These components do not have the right props!
-				</AlertMessage>
-				<Profile user={badUser}/>
-				<Dropdown options={badOptions}/>
+				
 			</div>
 		);
 	}
