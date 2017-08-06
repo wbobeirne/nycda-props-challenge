@@ -20,10 +20,10 @@ class Profile extends React.Component {
 
 Profile.propTypes = {
 	user: PropTypes.shape({
-		images: PropTypes.array,
+		images: PropTypes.arrayOf(PropTypes.number).isRequired,
 		firstName: PropTypes.string,
 		lastName: PropTypes.string,
-	}),
+	}).isRequired,
 };
 
 export default Profile;

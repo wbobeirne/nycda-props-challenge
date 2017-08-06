@@ -38,8 +38,8 @@ Dropdown.propTypes = {
 	options: PropTypes.arrayOf(PropTypes.shape({
 		name: PropTypes.string,
 		value: PropTypes.string,
-	})),
-	onChange: PropTypes.func,
+	})).isRequired,
+	onChange: PropTypes.func.isRequired,
 	value: PropTypes.string,
 };
 
