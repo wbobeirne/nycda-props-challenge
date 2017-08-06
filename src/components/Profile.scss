@@ -1,0 +1,22 @@
+.Profile {
+	max-width: 300px;
+	margin: 0 auto 10px;
+	padding: 10px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16),
+	            0 3px 6px rgba(0,0,0,0.23);
+
+	&-picture {
+		display: inline-block;
+		width: 60px;
+		height: 60px;
+		border-radius: 100%;
+		border: 1px solid #AAA;
+		margin-right: 20px;
+	}
+
+	&-name {
+		display: inline-block;
+		vertical-align: top;
+		font-size: 22px;
+	}
+}

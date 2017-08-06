@@ -1,0 +1,24 @@
+.AlertMessage {
+	max-width: 500px;
+	margin: 0 auto 10px;
+	border-radius: 2px;
+	color: #FFF;
+	padding: 8px 12px;
+
+	// This is the "default" type if none is provided
+	&--info {
+		background: #3498db;
+	}
+
+	&--success {
+		background: #2ecc71;
+	}
+
+	&--error {
+		background: #e74c3c;
+	}
+
+	&-close {
+		float: right;
+	}
+}
