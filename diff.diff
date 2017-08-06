@@ -1,0 +1,88 @@
+diff --git a/src/components/.placeholder b/src/components/.placeholder
+deleted file mode 100755
+index e69de29..0000000
+diff --git a/src/components/AlertMessage.jsx b/src/components/AlertMessage.jsx
+old mode 100644
+new mode 100755
+index 8d389c0..5be50eb
+--- a/src/components/AlertMessage.jsx
++++ b/src/components/AlertMessage.jsx
+@@ -1,6 +1,7 @@
+ // See my CSS for what types are valid
+ import "./AlertMessage.scss";
+ import React from "react";
++import PropTypes from "prop-types";
+ 
+ class AlertMessage extends React.Component {
+ 	constructor(props) {
+@@ -30,4 +31,9 @@ class AlertMessage extends React.Component {
+ 	}
+ }
+ 
++AlertMessage.propTypes = {
++	type: PropTypes.oneOf(["info", "success", "error"]),
++	children: PropTypes.node,
++};
++
+ export default AlertMessage;
+diff --git a/src/components/AlertMessage.scss b/src/components/AlertMessage.scss
+old mode 100644
+new mode 100755
+diff --git a/src/components/Dropdown.jsx b/src/components/Dropdown.jsx
+old mode 100644
+new mode 100755
+index 2296544..1715c73
+--- a/src/components/Dropdown.jsx
++++ b/src/components/Dropdown.jsx
+@@ -1,6 +1,6 @@
+ import "./Dropdown.scss";
+ import React from "react";
+-
++import PropTypes from "prop-types";
+ class Dropdown extends React.Component {
+ 	_handleChange = (ev) => {
+ 		this.props.onChange(ev);
+@@ -30,5 +30,11 @@ class Dropdown extends React.Component {
+ 		);
+ 	}
+ }
++Dropdown.propTypes = {
++	name: PropTypes.string,
++	label: PropTypes.string,
++	options: PropTypes.array,
++	value: PropTypes.string,
++};
+ 
+ export default Dropdown;
+diff --git a/src/components/Dropdown.scss b/src/components/Dropdown.scss
+old mode 100644
+new mode 100755
+diff --git a/src/components/Profile.jsx b/src/components/Profile.jsx
+old mode 100644
+new mode 100755
+index 1bda052..7016bd5
+--- a/src/components/Profile.jsx
++++ b/src/components/Profile.jsx
+@@ -1,5 +1,6 @@
+ import "./Profile.scss";
+ import React from "react";
++import PropTypes from "prop-types";
+ 
+ class Profile extends React.Component {
+ 	render() {
+@@ -16,5 +17,11 @@ class Profile extends React.Component {
+ 		);
+ 	}
+ }
+-
++Profile.propTypes = {
++	user: PropTypes.shape({
++		images: PropTypes.array.isRequired,
++		firstName: PropTypes.string.isRequired,
++		lastName: PropTypes.string.isRequired,
++	}),
++};
+ export default Profile;
+diff --git a/src/components/Profile.scss b/src/components/Profile.scss
+old mode 100644
+new mode 100755
