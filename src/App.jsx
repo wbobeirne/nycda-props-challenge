@@ -3,6 +3,7 @@ import React from "react";
 import AlertMessage from "components/AlertMessage";
 import Dropdown from "components/Dropdown";
 import Profile from "components/Profile";
+import PropTypes from "prop-types";
 
 class App extends React.Component {
 	render() {
