@@ -31,12 +31,8 @@ class AlertMessage extends React.Component {
 	}
 }
 AlertMessage.propTypes = {
-	options: PropTypes.shape({
-		label: PropTypes.string.isRequired,
-		name: PropTypes.string.isRequired,
-		value: PropTypes.string.isRequired,
-		type: PropTypes.string.isRequired,
-	}),
+ 	type: PropTypes.oneOf(["info","success","error"]),
+	children: PropTypes.node,
 };
 
 export default AlertMessage;
