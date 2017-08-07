@@ -1,5 +1,6 @@
 import "./Profile.scss";
 import React from "react";
+import PropTypes from "prop-types";
 
 class Profile extends React.Component {
 	render() {
@@ -16,5 +17,12 @@ class Profile extends React.Component {
 		);
 	}
 }
+Profile.propTypes = {
+	user: PropTypes.shape({
+		firstName: PropTypes.string,
+		lastName: PropTypes.string,
+		images: PropTypes.array,
+	}).isRequired,
+};
 
 export default Profile;
