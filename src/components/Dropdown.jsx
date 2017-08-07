@@ -32,11 +32,14 @@ class Dropdown extends React.Component {
 	}
 }
 Dropdown.propTypes = {
-	options: PropTypes.shape({
-		name: PropTypes.string.isRequired,
-		value: PropTypes.string.isRequired,
-		onChange: PropTypes.func.isRequired,
-	}),
+	name: PropTypes.string,
+	label: PropTypes.string,
+	options: PropTypes.arrayOf(PropTypes.shape({
+		name: PropTypes.string,
+		value: PropTypes.string,
+	})).isRequired,
+	onChange: PropTypes.func.isRequired,
+	value: PropTypes.string.isRequired,
 };
 
 export default Dropdown;
